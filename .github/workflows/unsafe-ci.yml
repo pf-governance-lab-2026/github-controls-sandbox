@@ -13,3 +13,5 @@ jobs:
       - name: Simulated unrestricted upgrade (echo only, no database exists)
         run: |
           echo "SIMULATED: flask db upgrade"
+
+# edited
