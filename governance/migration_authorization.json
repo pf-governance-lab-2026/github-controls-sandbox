@@ -1,0 +1,8 @@
+{
+ "schema": "duet-migration-authorization-v1",
+ "note": "Synthetic dry run. syn_0027 stands in for the pinned unauthorized revision.",
+ "authorized_targets": ["syn_0026"],
+ "pinned_unauthorized_revisions": ["syn_0027"],
+ "authorized_new_migration_files": {},
+ "authorized_workflow_hashes": {}
+}

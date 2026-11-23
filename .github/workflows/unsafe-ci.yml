@@ -1,0 +1,15 @@
+name: unsafe-ci (synthetic copy of the baseline pattern)
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  simulate:
+    runs-on: ubuntu-latest
+    env:
+      SECRET_KEY: synthetic-ci-only-value-not-a-secret
+    steps:
+      - name: Simulated unrestricted upgrade (echo only, no database exists)
+        run: |
+          echo "SIMULATED: flask db upgrade"

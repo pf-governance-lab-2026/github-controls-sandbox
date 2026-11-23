@@ -1,0 +1,42 @@
+name: guard
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened]
+permissions:
+  contents: read
+  pull-requests: read
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the protected base branch (guard, inventory, authorization)
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          path: base
+          persist-credentials: false
+      - name: Check out the pull request tree as data only (nothing in it is executed)
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: pr
+          persist-credentials: false
+      - name: List changed files
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: gh api "repos/$REPO/pulls/$PR/files" --paginate --jq '.[].filename' > changed.txt
+      - name: Run the guard from the base branch
+        run: |
+          python3 -I base/tools/duet_migration_guard.py check --tree pr \
+            --inventory base/governance/baseline_inventory.json \
+            --auth base/governance/migration_authorization.json \
+            --base-auth-sha "$(sha256sum base/governance/migration_authorization.json | cut -d' ' -f1)" \
+            --changed-files changed.txt --out guard_result.json
+      - name: Keep the result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: guard_result
+          path: guard_result.json

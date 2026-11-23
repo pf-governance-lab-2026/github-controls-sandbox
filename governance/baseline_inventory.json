@@ -1,0 +1,100 @@
+{
+ "baseline_upgrade_site_files": {
+  ".github/workflows/unsafe-ci.yml": "e15302be955593b5be56969277a062e42c880f9a0662c6acfb14f30d3599aba3",
+  "Procfile": "d7626a61be55a16100c52495b725f5eae26d20f9532733cf4e4c565233a8eb75"
+ },
+ "baseline_upgrade_sites": [
+  {
+   "class": "no_target",
+   "kind": "shell",
+   "line": 1,
+   "path": "Procfile",
+   "target": null,
+   "text": "flask db upgrade"
+  },
+  {
+   "class": "no_target",
+   "kind": "shell",
+   "line": 15,
+   "path": ".github/workflows/unsafe-ci.yml",
+   "target": null,
+   "text": "flask db upgrade"
+  }
+ ],
+ "baseline_workflows": {
+  ".github/workflows/guard.yml": "09cc5e94d732206871a6d9fea50aa288535a4153062d7ab7bc928f99a581f2ac",
+  ".github/workflows/secrets.yml": "63c6a75b7bb8da9520eaec7afd5beae6557425739e19348fe9b6377f5446e6e3",
+  ".github/workflows/unsafe-ci.yml": "e15302be955593b5be56969277a062e42c880f9a0662c6acfb14f30d3599aba3"
+ },
+ "baseline_workflows_running_upgrades": [
+  ".github/workflows/unsafe-ci.yml"
+ ],
+ "graph": {
+  "errors": [],
+  "heads": [
+   "syn_0027"
+  ],
+  "linear_order": [
+   "syn_0001",
+   "syn_0002",
+   "syn_0003",
+   "syn_0004",
+   "syn_0005",
+   "syn_0006",
+   "syn_0007",
+   "syn_0008",
+   "syn_0009",
+   "syn_0010",
+   "syn_0011",
+   "syn_0012",
+   "syn_0013",
+   "syn_0014",
+   "syn_0015",
+   "syn_0016",
+   "syn_0017",
+   "syn_0018",
+   "syn_0019",
+   "syn_0020",
+   "syn_0021",
+   "syn_0022",
+   "syn_0023",
+   "syn_0024",
+   "syn_0025",
+   "syn_0026",
+   "syn_0027"
+  ],
+  "roots": [
+   "syn_0001"
+  ]
+ },
+ "migration_files": {
+  "migrations/versions/syn_0001_synthetic.py": "3c3bbe737d11bef35c9dfd7ab1bb0bc0d1f7cbb2b301990e4f104c68d16b9a86",
+  "migrations/versions/syn_0002_synthetic.py": "e7524d073a8d7074246db7c6020d46472b01135595723b912fd8f31edfd26754",
+  "migrations/versions/syn_0003_synthetic.py": "526d3418d7981014608e8a152b5837f030ce1663217250b8b4a7faeec81a5231",
+  "migrations/versions/syn_0004_synthetic.py": "9f017fcca25595ed71552ffecf9f04cc6946d5f27ace487206fe6e68c7d469f3",
+  "migrations/versions/syn_0005_synthetic.py": "897e23b116119b96f1718187683995178f5c4771cd626d0d34674b60273cae86",
+  "migrations/versions/syn_0006_synthetic.py": "f53ca63b37d09dee6a1128775121910b0b96466bf9961a5c6329b702f37f6609",
+  "migrations/versions/syn_0007_synthetic.py": "e32150e480a6265929d8e15dbd8e7e38adbf6af0c45689b712430d11880f4b73",
+  "migrations/versions/syn_0008_synthetic.py": "00e52df61653404d15a7d8e3472f6a2d1d222e30af501f63db9aca0a1b06c919",
+  "migrations/versions/syn_0009_synthetic.py": "a7320969389c19f69f56801be957795bb11f9492e558656572f67a139c8ba206",
+  "migrations/versions/syn_0010_synthetic.py": "b7f6a890e47d6f29a4d5784a139d22450f18fb18b471843c3429bea275462c4a",
+  "migrations/versions/syn_0011_synthetic.py": "27cf16123e0fbe633ffed896e2fc298c44b2a971806224faeef85bae2634a6f2",
+  "migrations/versions/syn_0012_synthetic.py": "52dccd4f1ca5f648a7201f056fc0855bbcded246593df76f08b2076bfe74d713",
+  "migrations/versions/syn_0013_synthetic.py": "2ac9080e48d2cd097c2ae9ba0d6bcb403ebbb7666e0498e2a6925929327b1e53",
+  "migrations/versions/syn_0014_synthetic.py": "4e18d951bae1418048187b5f93665a3bb3fc89a25749b4556f3e1e5a5e3d808b",
+  "migrations/versions/syn_0015_synthetic.py": "77958f44906513b8e3eb3c7faa1f9bd37c07bc55f4c088fdf7ad8a8d07abd2d2",
+  "migrations/versions/syn_0016_synthetic.py": "ce8c50fac8668e72d844fb9b2dd00c01d0742bfe3b32992e9965b030feb5db2e",
+  "migrations/versions/syn_0017_synthetic.py": "d2ab7ca726bd6e1256ba249ebf6efb9ab59e4e53e6adfc9ff033081b93a8cef6",
+  "migrations/versions/syn_0018_synthetic.py": "c88609fc731da70ffe82a413a5b20296b1f06d00253d99678e8b55d5f9650eec",
+  "migrations/versions/syn_0019_synthetic.py": "40999542ba4009b6dd8797b0a5ba6f2a558671c749b9ad4aca9472a0b1622d19",
+  "migrations/versions/syn_0020_synthetic.py": "13e014e46ab692c6b9b538c3a44f0db50474d560d16c870a5e62ea34cfc1ef73",
+  "migrations/versions/syn_0021_synthetic.py": "65c3fbd821417adf9f7cd7f85d802ae6a1e3704473c6ab6cd576f673ca74337f",
+  "migrations/versions/syn_0022_synthetic.py": "60531a054fc9f1a06616e8ffa7bd7d479b8926eaa9cb04cf74cb342ca9f0fde5",
+  "migrations/versions/syn_0023_synthetic.py": "8e7535e595ff002bc9f0b8895753148ae7e42bd3b992836b79a1902e4bbf4bde",
+  "migrations/versions/syn_0024_synthetic.py": "f0a82342047d3e3d60ed230d8b005a07dc4f1d0c6f4f9318415e450f594300bd",
+  "migrations/versions/syn_0025_synthetic.py": "f2f90216e5e8693498bcdff5ca2053290d93d0e5cf73c3ed5e24d4167c9b093b",
+  "migrations/versions/syn_0026_synthetic.py": "6f340c05761bf69d0c61ba1b61d08b7b53a1574cb049ed2971fc5bbe8018c0be",
+  "migrations/versions/syn_0027_synthetic.py": "89403aaf3607327d2dd17eb2ce96cd5cfaf42ad193896385708cd8225c58710c"
+ },
+ "schema": "duet-migration-inventory-v1"
+}
