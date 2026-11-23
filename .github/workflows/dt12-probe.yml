@@ -1,0 +1,9 @@
+name: dt12-probe
+on: pull_request
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo DT12 new workflow ran from the pull request head
